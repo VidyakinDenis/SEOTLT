@@ -3,13 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://vidyakindenis.github.io/SEOTLT",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "dayjs": "^1.11.13",
@@ -37,6 +39,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-unused-imports": "^4.1.4",
+    "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
     "prettier": "^3.5.3",
     "react-redux": "^9.2.0",

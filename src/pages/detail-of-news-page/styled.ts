@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const DetailsOfNewsWrapper = styled.div`
   justify-self: center;
@@ -24,7 +24,7 @@ export const NewsInfo = styled.div`
 export const EditingButton = styled.button<{ img: string }>`
   height: 4vh;
   aspect-ratio: 1/1;
-  background-image: url('${(props) => props.img}');
+  background-image: url("${(props) => props.img}");
   background-size: 100%;
   background-position: center;
   border: none;

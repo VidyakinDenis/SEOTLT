@@ -1,19 +1,19 @@
-import * as S from './styled.ts';
-import { INewsForm } from '../../store/slices/news-slice/types/news-types.ts';
-import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
-import TitleInput from './inputs/title-input';
-import DescriptionInput from './inputs/desription-input';
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { create, setSelectedNews, update } from '../../store/slices/news-slice';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import * as S from "./styled.ts";
+import { INewsForm } from "../../store/slices/news-slice/types/news-types.ts";
+import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
+import TitleInput from "./inputs/title-input";
+import DescriptionInput from "./inputs/desription-input";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { create, setSelectedNews, update } from "../../store/slices/news-slice";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const NewsFormPage = () => {
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
 
   const dispatch = useAppDispatch();
-  const methods = useForm<INewsForm>({ mode: 'onSubmit' });
+  const methods = useForm<INewsForm>({ mode: "onSubmit" });
 
   const {
     handleSubmit,
@@ -34,7 +34,7 @@ const NewsFormPage = () => {
     } else {
       dispatch(create(data));
     }
-    navigate('/');
+    navigate("/");
   };
 
   return (
@@ -50,7 +50,7 @@ const NewsFormPage = () => {
           <DescriptionInput defaultValue={selectedItem && selectedItem.description} />
           {errors.name && <S.ErrorMessage>{errors.name.message}</S.ErrorMessage>}
         </S.InputBlock>
-        <S.SubmitButton>{id ? 'Завершить редактирование' : 'Опубликовать новость'}</S.SubmitButton>
+        <S.SubmitButton>{id ? "Завершить редактирование" : "Опубликовать новость"}</S.SubmitButton>
       </S.NewsFormPageWrapper>
     </FormProvider>
   );

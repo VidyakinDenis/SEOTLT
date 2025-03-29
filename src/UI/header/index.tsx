@@ -1,15 +1,15 @@
-import * as S from './styled.ts';
-import { useNavigate } from 'react-router-dom';
+import * as S from "./styled.ts";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const navigate = useNavigate();
 
   const onHome = () => {
-    navigate('/');
+    navigate("/");
   };
 
   const onCreate = () => {
-    navigate('/add_news');
+    navigate("/add_news");
   };
 
   return (

@@ -1,9 +1,9 @@
-import * as S from './styled.ts';
-import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { setSelectedNews } from '../../store/slices/news-slice';
-import { useNavigate, useParams } from 'react-router-dom';
-import EditingImage from '../../public/icons/edit-icon.svg';
+import * as S from "./styled.ts";
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { setSelectedNews } from "../../store/slices/news-slice";
+import { useNavigate, useParams } from "react-router-dom";
+import EditingImage from "../../public/icons/edit-icon.svg";
 
 const DetailsOfNews = () => {
   const dispatch = useAppDispatch();

@@ -1,10 +1,10 @@
-import * as S from './styled.ts';
-import { EndOfCard } from './styled.ts';
-import { FC } from 'react';
-import { INews } from '../../../store/slices/news-slice/types/news-types.ts';
-import { useAppDispatch } from '../../../store/hooks';
-import { deleteNews } from '../../../store/slices/news-slice';
-import { useNavigate } from 'react-router-dom';
+import * as S from "./styled.ts";
+import { EndOfCard } from "./styled.ts";
+import { FC } from "react";
+import { INews } from "../../../store/slices/news-slice/types/news-types.ts";
+import { useAppDispatch } from "../../../store/hooks";
+import { deleteNews } from "../../../store/slices/news-slice";
+import { useNavigate } from "react-router-dom";
 
 interface INewsListItemProps {
   listItem: INews;

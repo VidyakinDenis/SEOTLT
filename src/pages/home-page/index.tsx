@@ -1,6 +1,6 @@
-import * as S from './styled.ts';
-import { useAppSelector } from '../../store/hooks';
-import { NewsListItem } from './news-list-item';
+import * as S from "./styled.ts";
+import { useAppSelector } from "../../store/hooks";
+import { NewsListItem } from "./news-list-item";
 
 const HomePage = () => {
   const news = useAppSelector((store) => store.news.news);

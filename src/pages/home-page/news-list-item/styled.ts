@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const NewsListItemWrapper = styled.div`
   width: 100%;
   text-align: center;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #f4f4f4;
   margin-top: 1%;
   border: #d7d5d5 solid 1px;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const DescriptionInput = styled.textarea`
     border: 1px solid #c7c7c7;

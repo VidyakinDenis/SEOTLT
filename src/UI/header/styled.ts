@@ -1,7 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
-  //width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

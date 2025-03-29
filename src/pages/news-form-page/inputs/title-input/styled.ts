@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const TitleInput = styled.input`
   border: 1px solid #c7c7c7;
