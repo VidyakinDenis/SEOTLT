@@ -1,0 +1,8 @@
+node_modules
+dist
+*.config.js
+.env
+.env.*
+**/*.svg
+package-lock.json
+yarn.lock
