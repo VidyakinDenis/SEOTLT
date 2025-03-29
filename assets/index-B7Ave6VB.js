@@ -261,7 +261,7 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
   &:hover {
     background-color: #cecece;
   }
-`,B_=()=>{const l=si(),u=()=>{l("/")},r=()=>{l("/add_news")};return be.jsxs(N_,{children:[be.jsx(U_,{onClick:u,children:"News"}),be.jsx(H_,{onClick:r,children:"Опубликовать новость"})]})},j_=()=>be.jsx(be.Fragment,{children:be.jsxs(LE,{children:[be.jsx(B_,{}),be.jsxs(mE,{children:[be.jsx(Iu,{path:"/",element:be.jsx(JE,{})}),be.jsx(Iu,{path:"/news/:id",element:be.jsx(a_,{})}),be.jsx(Iu,{path:"/editing/:id",element:be.jsx(d0,{})}),be.jsx(Iu,{path:"/add_news",element:be.jsx(d0,{})})]})]})}),L_=X0({news:ev.reducer}),q_=()=>eS({reducer:L_}),Y_=_b`
+`,B_=()=>{const l=si(),u=()=>{l("/")},r=()=>{l("/add_news")};return be.jsxs(N_,{children:[be.jsx(U_,{onClick:u,children:"News"}),be.jsx(H_,{onClick:r,children:"Опубликовать новость"})]})},j_=()=>be.jsx(be.Fragment,{children:be.jsxs(LE,{basename:"/SEOTLT/",children:[be.jsx(B_,{}),be.jsxs(mE,{children:[be.jsx(Iu,{path:"/",element:be.jsx(JE,{})}),be.jsx(Iu,{path:"/news/:id",element:be.jsx(a_,{})}),be.jsx(Iu,{path:"/editing/:id",element:be.jsx(d0,{})}),be.jsx(Iu,{path:"/add_news",element:be.jsx(d0,{})})]})]})}),L_=X0({news:ev.reducer}),q_=()=>eS({reducer:L_}),Y_=_b`
     html {
         padding: 0;
         margin: 0;
