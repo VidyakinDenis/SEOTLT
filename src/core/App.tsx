@@ -7,7 +7,7 @@ import { Header } from "../UI/header";
 export const App = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={'/SEOTLT/'}>
         <Header />
         <Routes>
           <Route
