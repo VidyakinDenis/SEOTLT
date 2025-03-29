@@ -10,8 +10,12 @@ const HomePage = () => {
       <S.PageName>News</S.PageName>
       <S.NewsList>
         {!!news.length &&
-          news.map((listItem) => (<NewsListItem listItem={listItem} key={listItem.id}/>))
-        }
+          news.map((listItem) => (
+            <NewsListItem
+              listItem={listItem}
+              key={listItem.id}
+            />
+          ))}
       </S.NewsList>
     </S.HomePageWrapper>
   );

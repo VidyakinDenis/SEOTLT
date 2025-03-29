@@ -1,21 +1,22 @@
 import * as S from './styled.ts';
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { getSelectedNews } from '../../store/slices/news-slice';
+import { setSelectedNews } from '../../store/slices/news-slice';
 import { useNavigate, useParams } from 'react-router-dom';
-import EditingImage from '../../public/images/detail-of-news/edit-icon.svg';
+import EditingImage from '../../public/icons/edit-icon.svg';
 
 const DetailsOfNews = () => {
   const dispatch = useAppDispatch();
-  const selectedNews = useAppSelector((store) => store.news.selected);
+  const store = useAppSelector((store) => store.news);
+  const { selectedNews } = store;
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
   useEffect(() => {
     if (id) {
-      dispatch(getSelectedNews(id));
+      dispatch(setSelectedNews(id));
     }
-  }, [id, dispatch]);
+  }, [id]);
 
   if (!selectedNews) {
     return <div>Loading...</div>;

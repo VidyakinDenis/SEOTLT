@@ -5,11 +5,10 @@ export const NewsFormPageWrapper = styled.form`
   flex-direction: column;
   text-align: center;
   margin-top: 5%;
+  gap: 20px;
 `;
 
-export const InputBlock = styled.div`
-  margin-bottom: 1%;
-`;
+export const InputBlock = styled.div``;
 
 export const InputTitle = styled.h3`
   margin-top: 1%;
@@ -18,7 +17,7 @@ export const InputTitle = styled.h3`
 `;
 
 export const ErrorMessage = styled.div`
-  background-color: red;
+  color: red;
 `;
 
 export const SubmitButton = styled.button`

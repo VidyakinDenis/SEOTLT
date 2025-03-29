@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { App } from './core/App.tsx';
 
 import { setupStore } from './store';
+import { GlobalStyle } from './core/globals/global-style.ts';
 
 const store = setupStore();
 
@@ -12,6 +13,7 @@ const root = createRoot(container);
 
 root.render(
   <Provider store={store}>
+    <GlobalStyle />
     <App />
   </Provider>,
 );

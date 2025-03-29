@@ -4,7 +4,7 @@ import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import TitleInput from './inputs/title-input';
 import DescriptionInput from './inputs/desription-input';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { create, getSelectedNews, update } from '../../store/slices/news-slice';
+import { create, setSelectedNews, update } from '../../store/slices/news-slice';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -13,20 +13,20 @@ const NewsFormPage = () => {
   const { id } = useParams<{ id: string }>();
 
   const dispatch = useAppDispatch();
-  const methods = useForm<INewsForm>({ mode: 'onChange' });
+  const methods = useForm<INewsForm>({ mode: 'onSubmit' });
 
   const {
     handleSubmit,
     formState: { errors },
   } = methods;
 
-  const selectedItem = useAppSelector((store) => store.news.selected);
+  const selectedItem = id && useAppSelector((store) => store.news.selectedNews);
 
   useEffect(() => {
     if (id) {
-      dispatch(getSelectedNews(id));
+      dispatch(setSelectedNews(id));
     }
-  }, []);
+  }, [id]);
 
   const submit: SubmitHandler<INewsForm> = (data) => {
     if (id) {

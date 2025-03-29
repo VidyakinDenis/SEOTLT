@@ -13,6 +13,7 @@ export const NewsListItemWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   min-width: 280px;
+  cursor: pointer;
   @media (max-width: 850px) {
     padding: 10px;
     flex-direction: column;

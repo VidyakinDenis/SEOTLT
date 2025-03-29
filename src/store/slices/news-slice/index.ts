@@ -5,18 +5,20 @@ import dayjs from 'dayjs';
 
 interface IInitialState {
   news: INews[];
-  selected: INews | null;
+  selectedNews: INews | null;
 }
+const localStorageStore = localStorage.getItem('news');
 
 const initialState: IInitialState = {
-  news: [],
-  selected: null,
+  news: localStorageStore ? JSON.parse(localStorageStore) : [],
+  selectedNews: null,
 };
 
 export const NewsSlice = createSlice({
   name: 'news',
   initialState,
   reducers: {
+    // создание новости
     create(state, action: PayloadAction<INewsForm>) {
       const id = v1();
       const date = dayjs().format('HH:mm DD.MM.YYYY');
@@ -29,25 +31,27 @@ export const NewsSlice = createSlice({
       });
       localStorage.setItem('news', JSON.stringify(state.news));
     },
-    getSelectedNews(state, action: PayloadAction<string>) {
-      const localStorageStore = localStorage.getItem('news');
-      if (localStorageStore) state.news = JSON.parse(localStorageStore);
+
+    // установка новости для подробного отображения
+    setSelectedNews(state, action: PayloadAction<string>) {
+      console.log(action.payload);
       const selectedNews = state.news.find((news) => news.id === action.payload);
-      state.selected = selectedNews || null;
-    },
-    deleteNews(state, action: PayloadAction<string>) {
-      const deletedItemIndex = state.news.findIndex((news) => news.id === action.payload);
-      if (deletedItemIndex >= 0) {
-        state.news = [
-          ...state.news.slice(0, deletedItemIndex),
-          ...state.news.slice(deletedItemIndex + 1),
-        ];
+      if (selectedNews) {
+        state.selectedNews = selectedNews;
+      } else {
+        state.selectedNews = null;
       }
+    },
+
+    // удаление новости из списка
+    deleteNews(state, action: PayloadAction<string>) {
+      state.news = state.news.filter((news) => news.id !== action.payload);
       localStorage.setItem('news', JSON.stringify(state.news));
     },
 
+    // обновление имеющейся новости
     update(state, action: PayloadAction<IUpdateNews>) {
-      const date = dayjs().format('HH:mm-DD.MM.YYYY');
+      const date = dayjs().format('HH:mm DD.MM.YYYY');
 
       const { id, name, description } = action.payload;
 
@@ -59,19 +63,9 @@ export const NewsSlice = createSlice({
       }
       localStorage.setItem('news', JSON.stringify(state.news));
     },
-
-    initializeState(state) {
-      const localStorageStore = localStorage.getItem('news');
-      if (localStorageStore) {
-        state.news = JSON.parse(localStorageStore);
-      } else {
-        state.news = [];
-      }
-      state.selected = null;
-    },
   },
 });
 
-export const { create, deleteNews, update, initializeState, getSelectedNews } = NewsSlice.actions;
+export const { create, deleteNews, update, setSelectedNews } = NewsSlice.actions;
 
 export default NewsSlice.reducer;
