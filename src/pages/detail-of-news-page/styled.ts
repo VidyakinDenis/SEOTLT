@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DetailsOfNewsWrapper = styled.div`
   justify-self: center;
-  margin: 2.5% 0;
+  margin: 2.5% auto;
   background-color: #d7d7d7;
   padding: 2.5% 2.5% 5% 5%;
   border-radius: 20px;

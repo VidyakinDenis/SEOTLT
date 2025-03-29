@@ -4,6 +4,7 @@ export const NewsListItemWrapper = styled.div`
   width: 100%;
   text-align: center;
   align-items: center;
+    justify-self: center;
   font-family: "Poppins", sans-serif;
   background-color: #f4f4f4;
   margin-top: 1%;

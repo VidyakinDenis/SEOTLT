@@ -2,16 +2,18 @@ import * as S from "./styled.ts";
 import { useAppSelector } from "../../store/hooks";
 import { NewsListItem } from "./news-list-item";
 
-const HomePage = () => {
+const NewsListPage = () => {
   const news = useAppSelector((store) => store.news.news);
     console.log(news,'here')
 
     if(!news.length){
-        <h1>Новостей пока нет</h1>
+        return (
+            <h1>Новостей пока нет</h1>
+        )
     }
 
-  return (
-    <S.HomePageWrapper>
+    return (
+        <S.HomePageWrapper>
       <S.PageName>News</S.PageName>
       <S.NewsList>
         {!!news.length &&
@@ -26,4 +28,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default NewsListPage;

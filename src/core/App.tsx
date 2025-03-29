@@ -1,4 +1,4 @@
-import HomePage from "../pages/home-page";
+import NewsListPage from "../pages/news-list-page";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DetailsOfNews from "../pages/detail-of-news-page";
 import NewsFormPage from "../pages/news-form-page";
@@ -7,12 +7,12 @@ import { Header } from "../UI/header";
 export const App = () => {
   return (
     <>
-      <BrowserRouter basename={'/SEOTLT/'}>
+      <BrowserRouter >
         <Header />
         <Routes>
           <Route
             path="/"
-            element={<HomePage />}
+            element={<NewsListPage />}
           />
           <Route
             path="/news/:id"
