@@ -13,4 +13,5 @@ export const PageName = styled.h1`
 
 export const NewsList = styled.div`
   width: 80%;
+    margin: 0 auto;
 `;

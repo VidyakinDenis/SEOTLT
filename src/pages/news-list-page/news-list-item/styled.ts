@@ -7,13 +7,12 @@ export const NewsListItemWrapper = styled.div`
   justify-self: center;
   font-family: "Poppins", sans-serif;
   background-color: #f4f4f4;
-  margin-top: 1%;
+    margin: 1% auto;
   border: #d7d5d5 solid 1px;
   border-radius: 10px;
   padding: 1% 2%;
   display: flex;
   justify-content: space-between;
-  //min-width: 280px;
   cursor: pointer;
   @media (max-width: 850px) {
     justify-self: center;
