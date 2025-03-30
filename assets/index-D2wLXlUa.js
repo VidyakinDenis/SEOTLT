@@ -64,6 +64,7 @@ Error generating stack: `+n.message+`
   margin-bottom: 2%;
 `,Tb=Xe.div`
   width: 80%;
+    margin: 0 auto;
 `,mo=g1,vo=E1,Db=Xe.div`
   width: 100%;
   text-align: center;
