@@ -13,6 +13,7 @@ export const NewsHeader = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+    
 `;
 
 export const NewsInfo = styled.div`
@@ -36,15 +37,24 @@ export const NewsName = styled.h1`
   margin-bottom: 2%;
   margin-top: 0;
   font-size: 40px;
+    word-break: break-all;
 
   &::first-letter {
     text-transform: uppercase;
   }
+    
+    @media(max-width: 850px){
+        font-size: 23px;
+    }
 `;
 
 export const NewsDate = styled.span`
   font-size: 15px;
   color: #a8a8a8;
+    
+    @media(max-width: 850px){
+        font-size: 10px;
+    }
 `;
 
 export const News = styled.p`

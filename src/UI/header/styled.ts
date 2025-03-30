@@ -14,6 +14,7 @@ export const HeaderLogo = styled.button`
   font-size: 40px;
   border: none;
   background-color: transparent;
+    padding: 0;
 `;
 
 export const PublicButton = styled.button`

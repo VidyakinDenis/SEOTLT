@@ -13,7 +13,7 @@ export const NewsListItemWrapper = styled.div`
   padding: 1% 2%;
   display: flex;
   justify-content: space-between;
-  min-width: 280px;
+  //min-width: 280px;
   cursor: pointer;
   @media (max-width: 850px) {
     justify-self: center;
@@ -76,16 +76,17 @@ export const NewsDate = styled.span`
 
 export const DeleteItemButton = styled.button`
   border: 1px #d7d5d5 solid;
-  padding: 10px;
+  padding: 10px 0;
   border-radius: 12px;
   cursor: pointer;
   &:hover {
     background-color: #cecece;
   }
   @media (max-width: 850px) {
-    width: 100%;
-    margin-top: 1%;
+      
+    width: 80%;
+      margin: 1% auto ;
     padding: 2px;
-    font-size: 8px;
+    font-size: 10px;
   }
 `;

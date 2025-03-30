@@ -29,12 +29,14 @@ const NewsFormPage = () => {
   }, [id]);
 
   const submit: SubmitHandler<INewsForm> = (data) => {
-    if (id) {
-      dispatch(update({ ...data, id: id }));
-    } else {
-      dispatch(create(data));
+    if(data.name!== undefined && data.description !== undefined) {
+      if (id) {
+        dispatch(update({ ...data, id: id }));
+      } else {
+        dispatch(create(data));
+      }
+      navigate("/");
     }
-    navigate("/");
   };
 
   return (
@@ -48,7 +50,7 @@ const NewsFormPage = () => {
         <S.InputBlock>
           <S.InputTitle>Статья</S.InputTitle>
           <DescriptionInput defaultValue={selectedItem && selectedItem.description} />
-          {errors.name && <S.ErrorMessage>{errors.name.message}</S.ErrorMessage>}
+          {errors.name && <S.ErrorMessage>{errors?.description?.message}</S.ErrorMessage>}
         </S.InputBlock>
         <S.SubmitButton>{id ? "Завершить редактирование" : "Опубликовать новость"}</S.SubmitButton>
       </S.NewsFormPageWrapper>
