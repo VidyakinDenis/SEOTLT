@@ -15,7 +15,7 @@ export const NewsListItem: FC<INewsListItemProps> = ({ listItem }) => {
   const navigate = useNavigate();
 
   const handleDelete = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.stopPropagation()
+    event.stopPropagation();
     dispatch(deleteNews(listItem.id));
   };
 
@@ -28,7 +28,9 @@ export const NewsListItem: FC<INewsListItemProps> = ({ listItem }) => {
       <S.NewsName>{listItem.name}</S.NewsName>
       <EndOfCard>
         <S.NewsDate>{listItem.date}</S.NewsDate>
-        <S.DeleteItemButton onClick={(event) => handleDelete(event)}>удалить статью</S.DeleteItemButton>
+        <S.DeleteItemButton onClick={(event) => handleDelete(event)}>
+          удалить статью
+        </S.DeleteItemButton>
       </EndOfCard>
     </S.NewsListItemWrapper>
   );
