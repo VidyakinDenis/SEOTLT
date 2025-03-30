@@ -45,6 +45,7 @@ export const NewsName = styled.a`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+    font-weight: 700;
   font-size: 28px;
   width: 60%;
   &:visited {
@@ -55,6 +56,7 @@ export const NewsName = styled.a`
   }
 
   @media (max-width: 850px) {
+      text-align: center;
     font-size: 15px;
     width: 100%;
   }
@@ -75,7 +77,7 @@ export const NewsDate = styled.span`
 
 export const DeleteItemButton = styled.button`
   border: 1px #d7d5d5 solid;
-  padding: 10px 0;
+  padding: 10px 20px;
   border-radius: 12px;
   cursor: pointer;
   &:hover {
@@ -85,7 +87,6 @@ export const DeleteItemButton = styled.button`
       
     width: 80%;
       margin: 1% auto ;
-    padding: 2px;
     font-size: 10px;
   }
 `;

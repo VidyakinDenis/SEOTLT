@@ -4,10 +4,8 @@ import { NewsListItem } from "./news-list-item";
 
 const NewsListPage = () => {
   const news = useAppSelector((store) => store.news.news);
-  console.log(news, "here");
-
   if (!news.length) {
-    return <h1>Новостей пока нет</h1>;
+    return <S.EmptyNews>Новостей пока нет :(</S.EmptyNews>;
   }
 
   return (

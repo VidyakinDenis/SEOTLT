@@ -34,7 +34,6 @@ export const NewsSlice = createSlice({
 
     // установка новости для подробного отображения
     setSelectedNews(state, action: PayloadAction<string>) {
-      console.log(action.payload);
       const selectedNews = state.news.find((news) => news.id === action.payload);
       if (selectedNews) {
         state.selectedNews = selectedNews;

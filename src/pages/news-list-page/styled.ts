@@ -15,3 +15,8 @@ export const NewsList = styled.div`
   width: 80%;
     margin: 0 auto;
 `;
+
+export const EmptyNews = styled.h1`
+    text-align: center;
+    margin-top: 5%;
+`
