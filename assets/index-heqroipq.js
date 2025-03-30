@@ -69,10 +69,8 @@ Error generating stack: `+n.message+`
     text-align: center;
     margin-top: 5%;
 `,mo=g1,vo=E1,Rb=Ve.div`
-  width: 100%;
   text-align: center;
   align-items: center;
-  justify-self: center;
   font-family: "Poppins", sans-serif;
   background-color: #f4f4f4;
     margin: 1% auto;
@@ -282,7 +280,7 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
   &:hover {
     background-color: #cecece;
   }
-`,j_=()=>{const l=si(),u=()=>{l("/")},r=()=>{l("/add_news")};return be.jsxs(U_,{children:[be.jsx(H_,{onClick:u,children:"News"}),be.jsx(B_,{onClick:r,children:"Опубликовать новость"})]})},L_=()=>be.jsx(be.Fragment,{children:be.jsxs(qE,{children:[be.jsx(j_,{}),be.jsxs(vE,{children:[be.jsx(Iu,{path:"/",element:be.jsx(FE,{})}),be.jsx(Iu,{path:"/news/:id",element:be.jsx(u_,{})}),be.jsx(Iu,{path:"/editing/:id",element:be.jsx(d0,{})}),be.jsx(Iu,{path:"/add_news",element:be.jsx(d0,{})})]})]})}),q_=X0({news:ev.reducer}),Y_=()=>tS({reducer:q_}),V_=_b`
+`,j_=()=>{const l=si(),u=()=>{l("/")},r=()=>{l("/add_news")};return be.jsxs(U_,{children:[be.jsx(H_,{onClick:u,children:"News"}),be.jsx(B_,{onClick:r,children:"Опубликовать новость"})]})},L_=()=>be.jsx(be.Fragment,{children:be.jsxs(qE,{basename:"/SEOTLT/",children:[be.jsx(j_,{}),be.jsxs(vE,{children:[be.jsx(Iu,{path:"/",element:be.jsx(FE,{})}),be.jsx(Iu,{path:"/news/:id",element:be.jsx(u_,{})}),be.jsx(Iu,{path:"/editing/:id",element:be.jsx(d0,{})}),be.jsx(Iu,{path:"/add_news",element:be.jsx(d0,{})})]})]})}),q_=X0({news:ev.reducer}),Y_=()=>tS({reducer:q_}),V_=_b`
     html {
         padding: 0;
         margin: 0;
